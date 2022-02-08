@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link as LinkRouter } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
+import { theme } from "../../styles/theme";
 
 export const Nav = styled.nav`
   background: ${({ scrollNav }) => (scrollNav ? "#000" : "transparent")};
@@ -30,7 +31,11 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkRouter)`
-  color: #fff;
+  /* gradient text using webkit */
+  background: -webkit-linear-gradient(#cf2323, #eb8686);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   justify-self: flex-start;
   font-size: 1.5rem;
   display: flex;
@@ -82,8 +87,13 @@ export const NavLinks = styled(LinkScroll)`
   cursor: pointer;
 
   &.active {
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid ${theme.color.themeColor};
     /* background: yellow; */
+  }
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: ${theme.color.themeColor};
   }
 `;
 
@@ -98,7 +108,7 @@ export const NavButton = styled.nav`
 
 export const NavButtonLink = styled(LinkRouter)`
   border-radius: 50px;
-  background: #01bf71;
+  background: ${theme.color.themeColor};
   white-space: nowrap;
   padding: 10px 22px;
   color: #101606;

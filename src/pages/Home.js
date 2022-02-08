@@ -9,6 +9,8 @@ import { homeObjOne, homeObjTwo, homeObjThree } from "../components/Info/Data";
 import Departments from "../components/Departments/Departments";
 import Footer from "../components/Footer/Footer";
 // import { ReactComponent as ReactLogo } from "./svg-4.svg";
+// import { ThemeProvider } from "styled-components";
+// import { theme } from "../styles/theme";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +20,7 @@ const Home = () => {
   };
 
   return (
+    // <ThemeProvider theme={theme}>
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
@@ -28,6 +31,7 @@ const Home = () => {
       <Info {...homeObjThree} />
       <Footer />
     </>
+    // </ThemeProvider>
   );
 };
 
