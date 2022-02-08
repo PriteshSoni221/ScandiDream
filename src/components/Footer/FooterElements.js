@@ -85,8 +85,9 @@ export const SocialMediaWrap = styled.div`
 `;
 
 export const SocialLogo = styled(Link)`
-  color: #fff;
-  /* color: ${theme.color.themeColor}; */
+  background: -webkit-linear-gradient(#cf2323, #eb8686);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
