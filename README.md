@@ -1,6 +1,6 @@
 # About
 
-I have created my dream job site which requires no work experience (it is inspired by a real company in Riga, but I am not sure if I can reveal its name for copyright issues lol). 
+I have created my dream job site which requires no work experience. 
 
 
 ## Available scripts
